@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install git
+    apt:
+         name: git
+         state: present
+
+  - name: install webserver
+    apt:
+          name: apche2
+          state: present       
